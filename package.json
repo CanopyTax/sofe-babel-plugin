@@ -1,0 +1,28 @@
+{
+  "name": "sofe-babel-plugin",
+  "version": "0.1.0",
+  "description": "A babel plugin for making sofe services seem bundled",
+  "main": "lib/babel.js",
+  "scripts": {
+    "build": "babel src --out-dir lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/CanopyTax/sofe-babel-plugin.git"
+  },
+  "keywords": [
+    "sofe",
+    "babel",
+    "plugin"
+  ],
+  "author": "Joel Denning",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/CanopyTax/sofe-babel-plugin/issues"
+  },
+  "homepage": "https://github.com/CanopyTax/sofe-babel-plugin#readme",
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-preset-es2015": "^6.3.13"
+  }
+}
