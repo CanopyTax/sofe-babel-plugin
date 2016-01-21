@@ -2,9 +2,9 @@
   "name": "sofe-babel-plugin",
   "version": "0.1.0",
   "description": "A babel plugin for making sofe services seem bundled",
-  "main": "lib/babel.js",
+  "main": "lib/babel-plugin.js",
   "scripts": {
-    "build": "babel src --out-dir lib"
+    "build": "rm -rf lib && babel src --out-dir lib"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,6 @@
   "devDependencies": {
     "babel-cli": "^6.4.5",
     "babel-preset-es2015": "^6.3.13"
-  }
+  },
+  "registry": "npm"
 }
