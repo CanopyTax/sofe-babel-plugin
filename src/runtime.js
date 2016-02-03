@@ -8,6 +8,8 @@ export function loadServices(services) {
 		return new Promise((resolve, reject) => {
 			window.System.import(`${serviceName}!sofe`)
 			.then((service) => {
+				if (service.default)
+					service = service.default;
 				window.__synchronousSofe__[serviceName] = service;
 				resolve();
 			})
