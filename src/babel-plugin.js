@@ -2,7 +2,7 @@ export default function({ types: t }) {
 	return {
 		visitor: {
 			ImportDeclaration(path) {
-				if (path.node.source.value.lastIndexOf('!sofe') === path.node.source.value.length - '!sofe'.length) {
+				if (path.node.source.value.indexOf('!sofe') >= 0 && path.node.source.value.lastIndexOf('!sofe') === path.node.source.value.length - '!sofe'.length) {
 					const variableName = t.identifier(path.node.specifiers[0].local.name);
 					const sofeServiceName = path.node.source.value.substring(0, path.node.source.value.indexOf('!sofe'));
 					const memberExpression = t.memberExpression(
