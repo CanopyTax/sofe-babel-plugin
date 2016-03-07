@@ -1,9 +1,10 @@
+'use strict';
 export function mockSofeServices(services) {
-	if (!window)
-		window = {};
-	if (!window.__synchronousSofe__)
-		window.__synchronousSofe__ = {};
-	window.__synchronousSofe__ = {
+	if (!global.window)
+		global.window = {};
+	if (!global.window.__synchronousSofe__)
+		global.window.__synchronousSofe__ = {};
+	global.window.__synchronousSofe__ = {
 		...window.__synchronousSofe__,
 		...services,
 	};
